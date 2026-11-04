@@ -8,16 +8,54 @@
 </head>
 
 <body>
+    <!-- <div>
+        <input type="text" id="textname" >
+        <input type="button" value="ClickMe " onclick="btnClick()">
 
-    <input type="text" id="txtName">
-    <input type="button" value="Click Me" onclick="btnClickMe()">
+        <h1 id="lblCustomer">Customer Name</h1>
+        <ol id="olCustomer">
 
-    <h1 id="lblCustomerName">Customer Name</h1>
-    <ol id="olCustomer">
+        </ol>
+    </div>
 
-    </ol>
+    <div>
+
+        <input type="text" id="itemname">
+        <input type="button" value="Click" onclick="btnClick()">
+
+        <h1 id="lblItem">Item Names</h1>
+        <ol id="olItem">
+
+        </ol>
+    </div>
+  -->
+     <h2>Customer Details</h2>
+
+    <input id="txtId" type="text" placeholder="Customer Id">
+    <input id="txtName" type="text" placeholder="Customer Name">
+    <input id="txtAge" type="text" placeholder="Customer Age">
+    <input id="txtAddress" type="text" placeholder="Customer Address">
+    <input id="txtSalary" type="text" placeholder="Customer Salary">
+    <input type="Button" value="Add Customer" onclick="addCustomer()">
+
+    <br>
+    <h2>View Customer</h2>
+
+    <table border="1" width="100%" id="tblCustomers">
+        <tr>
+            <th>Customer ID</th>
+            <th>Customer Name</th>
+            <th>Customer Age</th>
+            <th>Customer Address</th>
+            <th>Customer Salary</th>
+
+        </tr>
 
 
-<script src="app.js"></script>
+    </table> 
+
+
+    <script src="app.js"></script>
 </body>
+
 </html>
