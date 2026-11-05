@@ -8,28 +8,41 @@
 </head>
 
 <body>
-    <!-- <div>
-        <input type="text" id="textname" >
-        <input type="button" value="ClickMe " onclick="btnClick()">
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <div class="row">
+                        <div class="col">
+                        <div></div>
+                        <input type="text" id="textname">
+                        <input type="button" value="ClickMe " onclick="btnClick()">
 
-        <h1 id="lblCustomer">Customer Name</h1>
-        <ol id="olCustomer">
+                        <h1 id="lblCustomer">Customer Name</h1>
+                        <ol id="olCustomer">
 
-        </ol>
-    </div>
+                        </ol>
+                        </div>
+                    </div>
+                    </td>
 
-    <div>
 
-        <input type="text" id="itemname">
-        <input type="button" value="Click" onclick="btnClick()">
+                    <td>
+                    <div class="col">
 
-        <h1 id="lblItem">Item Names</h1>
-        <ol id="olItem">
+                        <input type="text" id="itemname">
+                        <input type="button" value="Click" onclick="btnClick()">
 
-        </ol>
-    </div>
-  -->
-     <h2>Customer Details</h2>
+                        <h1 id="lblItem">Item Names</h1>
+                        <ol id="olItem">
+
+                        </ol>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <h2>Customer Details</h2>
 
     <input id="txtId" type="text" placeholder="Customer Id">
     <input id="txtName" type="text" placeholder="Customer Name">
@@ -38,7 +51,7 @@
     <input id="txtSalary" type="text" placeholder="Customer Salary">
     <input type="Button" value="Add Customer" onclick="addCustomer()">
 
-    <br> 
+    <br>
     <h2>View Customer</h2>
 
     <table border="1" width="100%" id="tblCustomers">
@@ -52,7 +65,7 @@
         </tr>
 
 
-    </table> 
+    </table>
 
 
     <script src="app.js"></script>

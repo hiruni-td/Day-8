@@ -88,11 +88,6 @@ function loadCustomerTable() {
             }
             document.getElementById("tblCustomers").innerHTML = body;
 
-
-
-
-
-
 }
 
 
