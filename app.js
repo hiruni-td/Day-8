@@ -1,42 +1,42 @@
-//  const customerNames = [];
+const customerName = [];
  
 
-// function btnClick() {
-//     let txtName = document.getElementById("txtname").value;
-//     customerNames.push(txtName);
-//     console.log(customerName);
-//     loadNames();
-// }
+function btnClick() {
+    let txtName = document.getElementById("txtname").value;
+    customerName.push(txtName);
+    console.log(customerName);
+    loadNames();
+}
 
-// function loadNames() {
-//     document.getElementById("olCustomer").innerHTML = "";
-//     for (let cName of customerName) {
-//         document.getElementById("olCustomer").innerHTML += `<li>${cName}</li>`;
+function loadNames() {
+    document.getElementById("olCustomer").innerHTML = "";
+    for (let cName of customerName) {
+        document.getElementById("olCustomer").innerHTML += `<li>${cName}</li>`;
 
-//     }
+    }
 
-// }
+}
 
 // //  document.getElementById("lblCustomerName").innerText=txtName;
 
 // //  document.getElementById("olCustomer").innerHTML+=`<li>${txtName}</li>`;
 
-// const itemNames = [];
+const itemName = [];
 
-// function btnClick() {
-//     let nameitem = document.getElementById("itemname").value;
-//     itemName.push(nameitem);
-//     loadItem();
-// }
+function btnClick() {
+    let nameitem = document.getElementById("itemname").value;
+    itemName.push(nameitem);
+    loadItem();
+}
 
-// function loadItem() {
-//     document.getElementById("olItem").innerHTML = "";
-//     for (let iName of itemName) {
-//        document.getElementById("olItem").innerHTML += `<li>${iName}</li>`;
+function loadItem() {
+    document.getElementById("olItem").innerHTML = "";
+    for (let iName of itemName) {
+       document.getElementById("olItem").innerHTML += `<li>${iName}</li>`;
 
-//     }
+    }
 
-// }
+}
 
 const customerList = [];
 
