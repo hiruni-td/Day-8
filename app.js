@@ -1,7 +1,7 @@
 const customerName = [];
  
 
-function btnClick() {
+function btnClickCustomer() {
     let txtName = document.getElementById("txtname").value;
     customerName.push(txtName);
     console.log(customerName);
@@ -23,9 +23,10 @@ function loadNames() {
 
 const itemName = [];
 
-function btnClick() {
+function btnClickItem() {
     let nameitem = document.getElementById("itemname").value;
     itemName.push(nameitem);
+    console.log(itemName);
     loadItem();
 }
 
