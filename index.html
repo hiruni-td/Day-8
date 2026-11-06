@@ -9,102 +9,102 @@
 </head>
 
 <body>
-    
-    <div class="col">
-    <h2>Customer Names</h2>
 
-    <input type="text" id="txtCustomerName" placeholder="Customer Name">
-    <input type="button" value="Add Customer Name"
-           onclick="btnclickme('txtCustomerName', 'olCustomers')">
-    <h3>Customer List</h3>
-    <ol id="olCustomers"></ol>
+    <div class="col">
+        <h2>Customer Names</h2>
+
+        <input type="text"id="txtCustomerName"placeholder="Customer Name">
+
+        <input type="button"value="Add Customer Name"onclick="btnclickme('txtCustomerName', 'olCustomers')">
+
+        <h3>Customer List</h3>
+        <ol id="olCustomers"></ol>
     </div>
 
-    
     <div class="col">
-    <h2>Item Names</h2>
-    <input type="text" id="txtItemName" placeholder="Item Name">
-    <input type="button" value="Add Item Name"
-           onclick="btnclickme('txtItemName', 'olItemNames')">
-    <h3>Item List</h3>
-    <ol id="olItemNames"></ol>
+        <h2>Item Names</h2>
+
+        <input type="text"id="txtItemName"placeholder="Item Name">
+
+        <input type="button"value="Add Item Name"onclick="btnclickme('txtItemName', 'olItemNames')">
+
+        <h3>Item List</h3>
+        <ol id="olItemNames"></ol>
     </div>
 
     <hr>
 
     
     <div>
-    <h1>Customer Details</h1>
+        <h1>Customer Details</h1>
 
-    <input id="textid" type="text" placeholder="Customer ID">
-    <input id="textName" type="text" placeholder="Customer Name">
-    <input id="textAge" type="number" placeholder="Customer Age">
-    <input id="textAddress" type="text" placeholder="Customer Address">
-    <input id="textSalary" type="number" placeholder="Customer Salary">
+        <input id="textid" type="text" placeholder="Customer ID">
+        <input id="textName" type="text" placeholder="Customer Name">
+        <input id="textAge" type="number" placeholder="Customer Age">
+        <input id="textAddress" type="text" placeholder="Customer Address">
+        <input id="textSalary"type="number"placeholder="Customer Salary"step="any">
 
-    <button onclick="addcustomer()">Add Customer</button>
+        <button type="button" onclick="addcustomer()">
+            Add Customer
+        </button>
     </div>
-    
+
+    <div>
+        <h3>View Customers</h3>
+
+        <div class="back">
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Address</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+
+                <tbody id="customerTable"></tbody>
+            </table>
+        </div>
+    </div>
+
     
     <div>
-    <h3>View Customers</h3>
-    <div class="back">
-    <table border="1" width="100%">
-        
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Address</th>
-                <th>Salary</th>
-            </tr>
-        
+        <h1>Item Details</h1>
 
-        <tbody id="customerTable">
-        </tbody>
-    </table>
-    </div>
+        <input id="textItemName" type="text" placeholder="Item Name">
+        <input id="textItemNumber" type="text" placeholder="Item Number">
+        <input id="textItemPrice"type="number" placeholder="Item Price"step="any">
+        <input id="textItemCode" type="text" placeholder="Item Code">
+        <input id="textItemWeight"type="number" placeholder="Item Weight"step="any">
+
+        <button type="button" onclick="addItem()">
+            Add Item
+        </button>
     </div>
 
-
-    <div >
-     <h1>Item Details</h1>
-
-    <input id="textid" type="text" placeholder="Item Name">
-    <input id="textName" type="text" placeholder="Item Number">
-    <input id="textAge" type="number" placeholder="Item Price">
-    <input id="textAddress" type="text" placeholder="Item Code">
-    <input id="textSalary" type="number" placeholder="Item weight">
-
-    <button onclick="addItem()">Add Item</button>
-    </div>
-    
-    
     <div>
-    <h3>View Item</h3>
-    <div class="back">
-    <table border="1" width="100%">
-        
-            <tr>
-                <th>Item Name</th>
-                <th>Item Number</th>
-                <th>Item Price</th>
-                <th>Item Code</th>
-                <th>Item weight</th>
-            </tr>
-        
+        <h3>View Item</h3>
 
-        <tbody id="ItemTable">
-        </tbody>
-    </table>
+        <div class="back">
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Item Number</th>
+                        <th>Item Price</th>
+                        <th>Item Code</th>
+                        <th>Item Weight</th>
+                    </tr>
+                </thead>
+
+                <tbody id="itemTable"></tbody>
+            </table>
+        </div>
     </div>
-    </div>
 
-    <div class="container">
-
-    
-   
     <script src="app.js"></script>
-
 </body>
+
 </html>
