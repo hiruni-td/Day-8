@@ -1,65 +1,45 @@
 const customerList = [];
 
 function btnclickme(inputId, listId) {
-
     let name = document.getElementById(inputId).value;
-
-    if (name === "") {
-        alert("Please enter a name");
-        return;
-    }
 
     let li = document.createElement("li");
 
-    li.innerHTML = name;
+    li.textContent = name;
 
     document.getElementById(listId).appendChild(li);
 
     document.getElementById(inputId).value = "";
 }
 
-
 function addcustomer() {
-
     let customerId = document.getElementById("textid").value;
     let customerName = document.getElementById("textName").value;
     let customerAge = document.getElementById("textAge").value;
     let customerAddress = document.getElementById("textAddress").value;
     let customerSalary = document.getElementById("textSalary").value;
 
-    if (!customerId || !customerName || !customerAge ||
-        !customerAddress || !customerSalary) {
+    let tr = document.createElement("tr");
 
-        alert("Please fill all fields");
-        return;
-    }
+    let td1 = document.createElement("td");
+    let td2 = document.createElement("td");
+    let td3 = document.createElement("td");
+    let td4 = document.createElement("td");
+    let td5 = document.createElement("td");
 
-    let customer = {
-        id: customerId,
-        name: customerName,
-        age: customerAge,
-        address: customerAddress,
-        salary: customerSalary
-    };
+    td1.textContent = customerId;
+    td2.textContent = customerName;
+    td3.textContent = customerAge;
+    td4.textContent = customerAddress;
+    td5.textContent = customerSalary;
 
-    customerList.push(customer);
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    tr.appendChild(td5);
 
-    let table = document.getElementById("customerTable");
-
-    let row = table.insertRow();
-
-    row.insertCell(0).innerHTML = customer.id;
-    row.insertCell(1).innerHTML = customer.name;
-    row.insertCell(2).innerHTML = customer.age;
-    row.insertCell(3).innerHTML = customer.address;
-    row.insertCell(4).innerHTML = customer.salary;
-
-    document.getElementById("textid").value = "";
-    document.getElementById("textName").value = "";
-    document.getElementById("textAge").value = "";
-    document.getElementById("textAddress").value = "";
-    document.getElementById("textSalary").value = "";
-
+    document.getElementById("customerTable").appendChild(tr);
 }
 
 function addItem() {
@@ -69,13 +49,25 @@ function addItem() {
     let itemCode = document.getElementById("textItemCode").value;
     let itemWeight = document.getElementById("textItemWeight").value;
 
-    let table = document.getElementById("itemTable");
+    let tr = document.createElement("tr");
 
-    let row = table.insertRow();
+    let td1 = document.createElement("td");
+    let td2 = document.createElement("td");
+    let td3 = document.createElement("td");
+    let td4 = document.createElement("td");
+    let td5 = document.createElement("td");
 
-    row.insertCell(0).textContent = itemName;
-    row.insertCell(1).textContent = itemNumber;
-    row.insertCell(2).textContent = itemPrice;
-    row.insertCell(3).textContent = itemCode;
-    row.insertCell(4).textContent = itemWeight;
+    td1.textContent = itemName;
+    td2.textContent = itemNumber;
+    td3.textContent = itemPrice;
+    td4.textContent = itemCode;
+    td5.textContent = itemWeight;
+
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    tr.appendChild(td5);
+
+    document.getElementById("itemTable").appendChild(tr);
 }
