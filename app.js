@@ -61,3 +61,21 @@ function addcustomer() {
     document.getElementById("textSalary").value = "";
 
 }
+
+function addItem() {
+    let itemName = document.getElementById("textItemName").value;
+    let itemNumber = document.getElementById("textItemNumber").value;
+    let itemPrice = document.getElementById("textItemPrice").value;
+    let itemCode = document.getElementById("textItemCode").value;
+    let itemWeight = document.getElementById("textItemWeight").value;
+
+    let table = document.getElementById("itemTable");
+
+    let row = table.insertRow();
+
+    row.insertCell(0).textContent = itemName;
+    row.insertCell(1).textContent = itemNumber;
+    row.insertCell(2).textContent = itemPrice;
+    row.insertCell(3).textContent = itemCode;
+    row.insertCell(4).textContent = itemWeight;
+}
