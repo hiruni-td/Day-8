@@ -1,53 +1,38 @@
-const customerName = [];
- 
-
-function btnClickCustomer() {
-    let txtName = document.getElementById("txtname").value;
-    customerName.push(txtName);
-    console.log(customerName);
-    loadNames();
-}
-
-function loadNames() {
-    document.getElementById("olCustomer").innerHTML = "";
-    for (let cName of customerName) {
-        document.getElementById("olCustomer").innerHTML += `<li>${cName}</li>`;
-
-    }
-
-}
-
-// //  document.getElementById("lblCustomerName").innerText=txtName;
-
-// //  document.getElementById("olCustomer").innerHTML+=`<li>${txtName}</li>`;
-
-const itemName = [];
-
-function btnClickItem() {
-    let nameitem = document.getElementById("itemname").value;
-    itemName.push(nameitem);
-    console.log(itemName);
-    loadItem();
-}
-
-function loadItem() {
-    document.getElementById("olItem").innerHTML = "";
-    for (let iName of itemName) {
-       document.getElementById("olItem").innerHTML += `<li>${iName}</li>`;
-
-    }
-
-}
-
 const customerList = [];
 
-function addCustomer() {
+function btnclickme(inputId, listId) {
 
-    let customerId = document.getElementById("txtId").value;
-    let customerName = document.getElementById("txtName").value;
-    let customerAge = document.getElementById("txtAge").value;
-    let customerAddress = document.getElementById("txtAddress").value;
-    let customerSalary = document.getElementById("txtSalary").value;
+    let name = document.getElementById(inputId).value;
+
+    if (name === "") {
+        alert("Please enter a name");
+        return;
+    }
+
+    let li = document.createElement("li");
+
+    li.innerHTML = name;
+
+    document.getElementById(listId).appendChild(li);
+
+    document.getElementById(inputId).value = "";
+}
+
+
+function addcustomer() {
+
+    let customerId = document.getElementById("textid").value;
+    let customerName = document.getElementById("textName").value;
+    let customerAge = document.getElementById("textAge").value;
+    let customerAddress = document.getElementById("textAddress").value;
+    let customerSalary = document.getElementById("textSalary").value;
+
+    if (!customerId || !customerName || !customerAge ||
+        !customerAddress || !customerSalary) {
+
+        alert("Please fill all fields");
+        return;
+    }
 
     let customer = {
         id: customerId,
@@ -58,39 +43,21 @@ function addCustomer() {
     };
 
     customerList.push(customer);
-    loadCustomerTable();
-    console.log(customerList);
-}
 
-function loadCustomerTable() {
+    let table = document.getElementById("customerTable");
 
-    let body = `<tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Address</th>
-                <th>Salary</th>
+    let row = table.insertRow();
 
-            </tr>`
+    row.insertCell(0).innerHTML = customer.id;
+    row.insertCell(1).innerHTML = customer.name;
+    row.insertCell(2).innerHTML = customer.age;
+    row.insertCell(3).innerHTML = customer.address;
+    row.insertCell(4).innerHTML = customer.salary;
 
-            for(let customer of customerList){
-
-                body += `
-                <tr>
-                    <td>${customer.id}</td>
-                    <td>${customer.name}</td>
-                    <td>${customer.age}</td>
-                    <td>${customer.address}</td>
-                    <td>${customer.salary}</td>
-                    
-                </tr>
-                `
-
-            }
-            document.getElementById("tblCustomers").innerHTML = body;
+    document.getElementById("textid").value = "";
+    document.getElementById("textName").value = "";
+    document.getElementById("textAge").value = "";
+    document.getElementById("textAddress").value = "";
+    document.getElementById("textSalary").value = "";
 
 }
-
-
-
-
