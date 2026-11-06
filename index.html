@@ -4,72 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <center>
-        <table>
+    
+    <div class="col">
+    <h2>Customer Names</h2>
+
+    <input type="text" id="txtCustomerName" placeholder="Customer Name">
+    <input type="button" value="Add Customer Name"
+           onclick="btnclickme('txtCustomerName', 'olCustomers')">
+    <h3>Customer List</h3>
+    <ol id="olCustomers"></ol>
+    </div>
+
+    
+    <div class="col">
+    <h2>Item Names</h2>
+    <input type="text" id="txtItemName" placeholder="Item Name">
+    <input type="button" value="Add Item Name"
+           onclick="btnclickme('txtItemName', 'olItemNames')">
+    <h3>Item List</h3>
+    <ol id="olItemNames"></ol>
+    </div>
+
+    <hr>
+
+    
+    <div>
+    <h1>Customer Details</h1>
+
+    <input id="textid" type="text" placeholder="Customer ID">
+    <input id="textName" type="text" placeholder="Customer Name">
+    <input id="textAge" type="number" placeholder="Customer Age">
+    <input id="textAddress" type="text" placeholder="Customer Address">
+    <input id="textSalary" type="number" placeholder="Customer Salary">
+
+    <button onclick="addcustomer()">Add Customer</button>
+    </div>
+    
+    
+    <div>
+    <h3>View Customers</h3>
+    <div class="back">
+    <table border="1" width="100%">
+        
             <tr>
-                <td>
-                    <div class="row">
-                        <div class="col">
-                            <div></div>
-                            <input type="text" id="txtname">
-                            <input type="button" value="ClickMe " onclick="btnClickCustomer()">
-
-                            <h1 id="lblCustomer">Customer Name</h1>
-                            <ol id="olCustomer">
-
-                            </ol>
-                        </div>
-                    </div>
-                </td>
-
-
-                <td>
-                    <div class="col">
-
-                        <input type="text" id="itemname">
-                        <input type="button" value="Click" onclick="btnClickItem()">
-
-                        <h1 id="lblItem">Item Name</h1>
-                        <ol id="olItem">
-
-                        </ol>
-                    </div>
-                </td>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Salary</th>
             </tr>
-        </table>
-    </center>
+        
 
-    <h2>Customer Details</h2>
-
-    <input id="txtId" type="text" placeholder="Customer Id">
-    <input id="txtName" type="text" placeholder="Customer Name">
-    <input id="txtAge" type="text" placeholder="Customer Age">
-    <input id="txtAddress" type="text" placeholder="Customer Address">
-    <input id="txtSalary" type="text" placeholder="Customer Salary">
-    <input type="Button" value="Add Customer" onclick="addCustomer()">
-
-    <br>
-    <h2>View Customer</h2>
-
-    <table border="1" width="100%" id="tblCustomers">
-        <tr>
-            <th>Customer ID</th>
-            <th>Customer Name</th>
-            <th>Customer Age</th>
-            <th>Customer Address</th>
-            <th>Customer Salary</th>
-
-        </tr>
-
-
+        <tbody id="customerTable">
+        </tbody>
     </table>
+    </div>
+    </div>
 
 
+    <div >
+     <h1>Item Management</h1>
+
+    <input id="textid" type="text" placeholder="Item Name">
+    <input id="textName" type="text" placeholder="Item Number">
+    <input id="textAge" type="number" placeholder="Item Price">
+    <input id="textAddress" type="text" placeholder="Item Code">
+    <input id="textSalary" type="number" placeholder="Item weight">
+
+    <button onclick="addItem()">Add Item</button>
+    </div>
+    
+    
+    <div>
+    <h3>View Item</h3>
+    <div class="back">
+    <table border="1" width="100%">
+        
+            <tr>
+                <th>Item Name</th>
+                <th>Item Number</th>
+                <th>Item Price</th>
+                <th>Item Code</th>
+                <th>Item weight</th>
+            </tr>
+        
+
+        <tbody id="ItemTable">
+        </tbody>
+    </table>
+    </div>
+    </div>
+
+    <div class="container">
+
+    
+   
     <script src="app.js"></script>
-</body>
 
+</body>
 </html>
